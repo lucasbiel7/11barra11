@@ -1,0 +1,22 @@
+<project>
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.stefanini</groupId>
+        <artifactId>11barra11-parent</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <artifactId>11barra11</artifactId>
+    <packaging>ear</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.stefanini</groupId>
+            <artifactId>11barra11-web</artifactId>
+            <type>war</type>
+        </dependency>
+        <dependency>
+            <groupId>com.stefanini</groupId>
+            <artifactId>11barra11-ejb</artifactId>
+        </dependency>
+    </dependencies>
+</project>

@@ -1,0 +1,10 @@
+<project>
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.stefanini</groupId>
+        <artifactId>11barra11-parent</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <artifactId>11barra11-web</artifactId>
+    <packaging>war</packaging>
+</project>
