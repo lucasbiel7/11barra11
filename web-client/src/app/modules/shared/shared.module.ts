@@ -15,6 +15,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { HttpModule } from '@angular/http';
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
     imports: [
@@ -22,56 +23,45 @@ import { BrowserModule } from '@angular/platform-browser';
         BrowserModule,
         CommonModule,
         HttpModule,
-        /**
-         * Animation for material design
-         * */
+        RouterModule,
+        BrowserModule,
+        CommonModule,
+        HttpModule,
+        // Animação
         BrowserAnimationsModule,
-        /* Angular Material Design - Forms */
+        /* Angular Material*/
         MatCheckboxModule,
         MatDatepickerModule,
         MatFormFieldModule,
         MatInputModule,
         MatRadioModule,
         MatSelectModule,
-        /* Angular Material Design - Navigation */
         MatSidenavModule,
-        /* Angular Material Design - Layout */
-        /* Angular Material Design - Buttons & Indicators */
         MatButtonModule,
         MatProgressBarModule,
-        /* Angular Material Design - Popups & Modals */
-        /* Angular Material Design - Data table */
     ],
     exports: [
-
         /* Angular Core */
         BrowserModule,
         CommonModule,
         HttpModule,
-        /**
-         * Animation for material design
-         * */
+        RouterModule,
+        BrowserModule,
+        CommonModule,
+        HttpModule,
+        // Animação
         BrowserAnimationsModule,
-        /* Angular Material Design - Forms */
+        /* Angular Material*/
         MatCheckboxModule,
         MatDatepickerModule,
         MatFormFieldModule,
         MatInputModule,
         MatRadioModule,
         MatSelectModule,
-        /* Angular Material Design - Navigation */
         MatSidenavModule,
-        /* Angular Material Design - Layout */
-        /* Angular Material Design - Buttons & Indicators */
         MatButtonModule,
         MatProgressBarModule,
-        /* Angular Material Design - Popups & Modals */
-        /* Angular Material Design - Data table */
-
-
-        /**
-         * Componentes compartilhados
-         */
+        // Componentes shared
         CabecalhoComponent,
         MenuComponent,
         PainelAcoesComponent
