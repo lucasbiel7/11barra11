@@ -4,3 +4,4 @@ bin/
 .classpath
 .settings/
 .node_modules/
+*package-lock.json
