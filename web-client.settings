@@ -21,7 +21,7 @@
 			".sonarlint": true,
 			"npm-debug.log": true,
 			"protractor.conf.js": true,
-			".gitignore": true,
+			".gitignore": false,
 			"README.md": true,
 			"bin/": true
 		},
