@@ -16,6 +16,7 @@ import { HttpModule } from '@angular/http';
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
+import { RodapeComponent } from './components/rodape/rodape.component';
 
 @NgModule({
     imports: [
@@ -64,12 +65,14 @@ import { RouterModule } from '@angular/router';
         // Componentes shared
         CabecalhoComponent,
         MenuComponent,
-        PainelAcoesComponent
+        PainelAcoesComponent,
+        RodapeComponent
     ]
     , declarations: [
         CabecalhoComponent,
         MenuComponent,
-        PainelAcoesComponent
+        PainelAcoesComponent,
+        RodapeComponent
     ]
 })
 export class SharedModule {
