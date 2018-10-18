@@ -6,8 +6,7 @@
 	],
 	"settings": {
 		"files.exclude": {
-			"node_modules/": true,
-			
+			"node_modules/": false,
 			".settings/": true,
 			".vscode/": true,
 			"src/main/": true,
@@ -21,7 +20,7 @@
 			".sonarlint": true,
 			"npm-debug.log": true,
 			"protractor.conf.js": true,
-			".gitignore": false,
+			".gitignore": true,
 			"README.md": true,
 			"bin/": true
 		},
