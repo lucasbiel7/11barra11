@@ -23,57 +23,16 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 /* Angular Material Design - Data table */
 
 
+import { SharedModule } from '../shared/shared.module';
 import { CoreRoutingModule } from './core-routing.module';
 
 @NgModule({
     imports: [
-        /* Angular Core */
-        BrowserModule,
-        CommonModule,
-        HttpModule,
+        SharedModule.forRoot(),
         /* Angular Material Design */
-        BrowserAnimationsModule,
-        /* Angular Material Design - Forms */
-        MatCheckboxModule,
-        MatDatepickerModule,
-        MatFormFieldModule,
-        MatInputModule,
-        MatRadioModule,
-        MatSelectModule,
-        /* Angular Material Design - Navigation */
-        MatSidenavModule,
-        /* Angular Material Design - Layout */
-        /* Angular Material Design - Buttons & Indicators */
-        MatButtonModule,
-        MatProgressBarModule,
-        /* Angular Material Design - Popups & Modals */
-        /* Angular Material Design - Data table */
-
-        // Routing module do core
         CoreRoutingModule
     ],
     exports: [
-        /* Angular Core */
-        BrowserModule,
-        CommonModule,
-        HttpModule,
-        /* Angular Material Design */
-        BrowserAnimationsModule,
-        /* Angular Material Design - Forms */
-        MatCheckboxModule,
-        MatDatepickerModule,
-        MatFormFieldModule,
-        MatInputModule,
-        MatRadioModule,
-        MatSelectModule,
-        /* Angular Material Design - Navigation */
-        MatSidenavModule,
-        /* Angular Material Design - Layout */
-        /* Angular Material Design - Buttons & Indicators */
-        MatButtonModule,
-        MatProgressBarModule,
-        /* Angular Material Design - Popups & Modals */
-        /* Angular Material Design - Data table */
     ],
     declarations: []
 })
