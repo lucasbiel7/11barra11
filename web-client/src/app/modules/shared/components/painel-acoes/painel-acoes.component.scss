@@ -2,7 +2,9 @@
 
 section.conteudo{
     div.header{
-        background: linear-gradient(to bottom, $primaria 100%, #ffffff 0%);
+        background: linear-gradient(to bottom,$primaria-aux, $primaria);
+        padding: 0.2rem;
+        color:white;
     }
 
 }
