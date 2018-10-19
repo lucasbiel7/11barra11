@@ -1,0 +1,21 @@
+@import 'src/assets/scss/variables';
+
+section.conteudo{
+    header{
+        background: linear-gradient(to bottom,$primaria-aux, $primaria);
+        padding: 0.5rem;
+        color:white;
+        border-radius: 0.3rem 0.3rem 0 0;
+        -webkit-transform: skew(30deg);
+        -ms-transform: skew(30deg);
+        transform: skew(30deg);
+        p.titulo{
+            margin-top: auto;
+            margin-bottom: auto;
+            justify-content: center;
+            -webkit-transform: skew(-30deg);
+            -ms-transform: skew(-30deg);
+            transform: skew(-30deg);
+        }
+    }
+}

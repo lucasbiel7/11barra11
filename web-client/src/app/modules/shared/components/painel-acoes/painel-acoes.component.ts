@@ -1,15 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'onz-painel-acoes',
-  templateUrl: './painel-acoes.component.html',
-  styleUrls: ['./painel-acoes.component.scss']
+    selector: 'onz-painel-acoes',
+    templateUrl: './painel-acoes.component.html',
+    styleUrls: ['./painel-acoes.component.scss']
 })
 export class PainelAcoesComponent implements OnInit {
 
-  constructor() { }
+    @Input()
+    public titulo: string;
 
-  ngOnInit() {
-  }
+    constructor() { }
+
+    ngOnInit() {
+
+    }
 
 }
