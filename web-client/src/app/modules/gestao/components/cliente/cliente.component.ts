@@ -1,15 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'onz-cliente',
-  templateUrl: './cliente.component.html',
-  styleUrls: ['./cliente.component.scss']
+    selector: 'onz-cliente',
+    templateUrl: './cliente.component.html',
+    styleUrls: ['./cliente.component.scss']
 })
 export class ClienteComponent implements OnInit {
 
-  constructor() { }
+    titulo: string;
 
-  ngOnInit() {
-  }
+    constructor() { }
+
+    ngOnInit() {
+        this.titulo = 'Pesquisar Cliente(s)';
+    }
 
 }

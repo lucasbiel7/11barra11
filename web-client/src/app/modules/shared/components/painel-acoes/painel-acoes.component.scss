@@ -1,0 +1,10 @@
+@import 'src/assets/scss/variables';
+
+section.conteudo{
+    div.header{
+        background: linear-gradient(to bottom,$primaria-aux, $primaria);
+        padding: 0.2rem;
+        color:white;
+    }
+
+}
