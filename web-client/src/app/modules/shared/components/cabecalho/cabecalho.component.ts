@@ -8,10 +8,18 @@ import { Component, OnInit } from '@angular/core';
 export class CabecalhoComponent implements OnInit {
 
     public nome = 'Desenvolvedor';
+    public show = false;
 
     constructor() { }
 
     ngOnInit() {
     }
 
+    showMenu() {
+        if (this.show) {
+            this.show = false;
+        } else {
+            this.show = true;
+        }
+    }
 }

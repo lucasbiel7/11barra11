@@ -5,7 +5,7 @@
     <div class="example-container">
         <mat-toolbar class="example-toolbar">
             <button mat-icon-button>
-                <mat-icon>menu</mat-icon>
+                <mat-icon (click)="showMenu()">menu</mat-icon>
                 {{nome}}
             </button>
         </mat-toolbar>
@@ -17,5 +17,6 @@
             </mat-sidenav>
         </mat-sidenav-container>
     </div>
-
+    
 </header>
+<onz-menu [showMenu]="show" *ngIf="show"></onz-menu>
