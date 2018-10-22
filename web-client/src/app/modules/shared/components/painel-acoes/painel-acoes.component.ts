@@ -10,10 +10,11 @@ export class PainelAcoesComponent implements OnInit {
     @Input()
     public titulo: string;
 
-    constructor() { }
+    constructor() {
+
+    }
 
     ngOnInit() {
-
     }
 
 }

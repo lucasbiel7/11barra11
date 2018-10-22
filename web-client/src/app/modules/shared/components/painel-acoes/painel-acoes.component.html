@@ -6,14 +6,14 @@
                     <p class="titulo " [innerHTML]="titulo"></p>
                 </header>
             </div>
-        </div>
-        <div class="d-flex justify-content-end mt-2">
-            <div>
+            <div class="d-flex justify-content-end botoao-acoes">
                 <ng-content select="[botoao-acoes]"></ng-content>
             </div>
         </div>
         <div class="row">
-            <ng-content select="['conteudo']"></ng-content>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mt-2">
+                <ng-content select="[conteudo]"></ng-content>
+            </div>
         </div>
     </div>
 </section>
