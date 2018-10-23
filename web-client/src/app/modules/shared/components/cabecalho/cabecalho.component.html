@@ -2,20 +2,23 @@
     <div class="text-center">
         <img src="assets/img/cabecalho.png">
     </div>
-    <div class="example-container">
-        <mat-toolbar class="example-toolbar">
-            <button mat-icon-button>
-                <mat-icon>menu</mat-icon>
-                {{nome}}
-            </button>
-        </mat-toolbar>
-        <mat-sidenav-container class="example-sidenav-container">
-            <mat-sidenav #snav fixedTopGap="56">
-                <mat-nav-list>
-                    <a mat-list-item routerLink="."></a>
-                </mat-nav-list>
-            </mat-sidenav>
-        </mat-sidenav-container>
-    </div>
-
+    <mat-sidenav-container class="navbar">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <button mat-icon-button>
+                    <mat-icon>menu</mat-icon>
+                </button>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 text-right align-self-center">
+                <h4>{{usuario}}</h4>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-1 col-lg-1 align-self-center">
+                <mat-select [(value)]="valorSelecionado">
+                    <mat-option *ngFor="let opcao of opcoes" [value]="opcao.chave">
+                        {{opcao.valor}}
+                    </mat-option>
+                </mat-select>
+            </div>
+        </div>
+    </mat-sidenav-container>
 </header>

@@ -7,10 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CabecalhoComponent implements OnInit {
 
-    public nome = 'Desenvolvedor';
+    public usuario: string;
+    public valorSelecionado;
+    opcoes: any[];
 
-    constructor() { }
-
+    constructor() {
+        this.usuario = 'Desenvolvedor';
+        this.opcoes = [
+            { chave: 'cargo', valor: 'Desenvolvedor' },
+            { chave: 'alterarSenha', valor: 'Alterar Senha' },
+            { chave: 'sair', valor: 'Sair' }
+        ];
+    }
     ngOnInit() {
     }
 
