@@ -5,22 +5,17 @@ section.conteudo{
         background: linear-gradient(to bottom,$primaria-aux, $primaria);
         padding: 0.5rem;
         color:white;
-        border-radius: 0.3rem 0.3rem 0 0;
-        -webkit-transform: skew(30deg);
-        -ms-transform: skew(30deg);
-        transform: skew(30deg);
-
+        border-radius: 0 0 0.3rem 0.3rem;
+        border-top-right-radius: 2.5rem;
+        width: 100%;
         p.titulo{
             margin-top: auto;
             margin-bottom: auto;
             justify-content: center;
-            -webkit-transform: skew(-30deg);
-            -ms-transform: skew(-30deg);
-            transform: skew(-30deg);
         }
     }
 
-    .botoao-acoes ::ng-deep  button{
+    .botoao-acoes ::ng-deep button{
         margin-right: .2rem;
         background-color: $primaria;
         color:white;
