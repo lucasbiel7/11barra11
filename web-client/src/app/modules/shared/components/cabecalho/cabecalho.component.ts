@@ -10,6 +10,7 @@ export class CabecalhoComponent implements OnInit {
     public usuario: string;
     public valorSelecionado;
     opcoes: any[];
+    public show = false;
 
     constructor() {
         this.usuario = 'Desenvolvedor';
@@ -19,7 +20,9 @@ export class CabecalhoComponent implements OnInit {
             { chave: 'sair', valor: 'Sair' }
         ];
     }
+
     ngOnInit() {
+
     }
 
 }
