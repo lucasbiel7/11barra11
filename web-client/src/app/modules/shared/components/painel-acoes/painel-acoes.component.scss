@@ -1,10 +1,42 @@
 @import 'src/assets/scss/variables';
 
 section.conteudo{
-    div.header{
+    header{
         background: linear-gradient(to bottom,$primaria-aux, $primaria);
-        padding: 0.2rem;
+        padding: 0.5rem;
         color:white;
+        border-radius: 0.3rem 0.3rem 0 0;
+        -webkit-transform: skew(30deg);
+        -ms-transform: skew(30deg);
+        transform: skew(30deg);
+
+        p.titulo{
+            margin-top: auto;
+            margin-bottom: auto;
+            justify-content: center;
+            -webkit-transform: skew(-30deg);
+            -ms-transform: skew(-30deg);
+            transform: skew(-30deg);
+        }
+    }
+
+    .botoao-acoes ::ng-deep  button{
+        margin-right: .2rem;
+        background-color: $primaria;
+        color:white;
+        border:none;
+        border-radius: .3rem;
+        border-bottom-left-radius: 2.7rem;
+        padding: 0.4rem 1rem;
+        height: 100%;
+
+        &:hover, &:visited, &:active, &:focus{
+            background-color:$azul-escuro;
+        }
+
+        &:last-child{
+            margin-right: 0;
+        }
     }
 
 }
