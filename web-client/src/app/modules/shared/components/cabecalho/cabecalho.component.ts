@@ -20,14 +20,9 @@ export class CabecalhoComponent implements OnInit {
             { chave: 'sair', valor: 'Sair' }
         ];
     }
+
     ngOnInit() {
+
     }
 
-    showMenu() {
-        if (this.show) {
-            this.show = false;
-        } else {
-            this.show = true;
-        }
-    }
 }
