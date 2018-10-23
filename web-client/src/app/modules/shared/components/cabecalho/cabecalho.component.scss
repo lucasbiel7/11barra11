@@ -19,3 +19,8 @@ header {
         }
     }
 }
+
+::ng-deep .tamanho {
+    max-width: 16rem !important;
+    overflow: hidden !important;
+}
