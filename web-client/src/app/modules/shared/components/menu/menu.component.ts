@@ -15,7 +15,7 @@ export class MenuComponent implements OnInit {
             { tooltip: ItemMenu.PARAMETRIZAÇÃO, icone: 'widgets', habilitado: true },
             { tooltip: ItemMenu.FASE_EXECUCAO, icone: 'nfc', habilitado: true },
             { tooltip: ItemMenu.CONTRATO, icone: 'work', habilitado: true },
-            { tooltip: ItemMenu.ATIVIDADE, icone: 'perm_data_setting', habilitado: true },
+            { tooltip: ItemMenu.ATIVIDADE, icone: 'directions_walk', habilitado: true },
             { tooltip: ItemMenu.ORDEM_SERVICO, icone: 'description', habilitado: true },
             { tooltip: ItemMenu.METRICA, icone: 'receipt', habilitado: true },
             { tooltip: ItemMenu.FATURAMENTO, icone: 'attach_money', habilitado: true },
