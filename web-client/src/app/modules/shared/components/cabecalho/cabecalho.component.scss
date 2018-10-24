@@ -1,6 +1,10 @@
 @import 'src/assets/scss/variables';
 
 header {
+   div img{
+        max-height: 107px;
+        max-width: 100%;
+    }
     .navbar {
         border-radius: 0.4rem 0.4rem 0 0;
         background: $azul-escuro;
@@ -8,9 +12,8 @@ header {
             background-color: $azul-escuro;
             color: white;
         }
-        h5{
+        span{
             color: white;
-            margin:auto;
         }
         ::ng-deep {
             .mat-drawer-content {

@@ -1,34 +1,31 @@
 <header>
-    <div class="text-center">
-        <img src="assets/img/cabecalho.png">
+    <div class="text-center d-none d-md-block">
+        <img width="100%" src="assets/img/cabecalho.png">
+    </div>
+    <div class="text-center d-sm-block d-md-none">
+        <img src="assets/img/logo-sm.png">
     </div>
     <mat-sidenav-container class="navbar">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                    <button mat-icon-button [matMenuTriggerFor]="menuPrincipal">
-                        <mat-icon>menu</mat-icon>
+        <div class="row">
+            <div class="col-xs-2 col-sm-2 col-md-6 col-lg-6">
+                <button mat-icon-button [matMenuTriggerFor]="menuPrincipal">
+                    <mat-icon>menu</mat-icon>
+                </button>
+                <mat-menu #menuPrincipal="matMenu" class="tamanho" [overlapTrigger]="false">
+                    <onz-menu></onz-menu>
+                </mat-menu>
+            </div>
+            <div class="col-xs-9 col-sm-9 col-md-6 col-lg-6 text-right ">
+                <div class="d-flex justify-content-end ">
+                    <span class="align-self-center">{{usuario}}</span>
+                    <button mat-icon-button [matMenuTriggerFor]="menuUsuario">
+                        <mat-icon>keyboard_arrow_down</mat-icon>
                     </button>
-                    <mat-menu #menuPrincipal="matMenu" class="tamanho" [overlapTrigger]="false">
-                        <onz-menu></onz-menu>
+                    <mat-menu #menuUsuario="matMenu">
+                        <button mat-menu-item *ngFor="let opcao of opcoes" [value]="opcao.chave">
+                            {{opcao.valor}}
+                        </button>
                     </mat-menu>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-right ">
-                    <div class="row">
-                        <div class="col text-right align-self-center">
-                            <h5>{{usuario}}</h5>
-                        </div>
-                        <div class="d-flex">
-                            <button mat-icon-button [matMenuTriggerFor]="menuUsuario">
-                                <mat-icon>keyboard_arrow_down</mat-icon>
-                            </button>
-                            <mat-menu #menuUsuario="matMenu">
-                                <button mat-menu-item *ngFor="let opcao of opcoes" [value]="opcao.chave">
-                                    {{opcao.valor}}
-                                </button>
-                            </mat-menu>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

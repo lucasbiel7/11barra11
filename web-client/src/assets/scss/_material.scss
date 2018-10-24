@@ -1,0 +1,12 @@
+@import 'src/assets/scss/variables';
+
+.mat-card-header{
+    background-color: $azul-escuro;
+    border-radius: .3rem;
+    color: white;
+
+    .mat-card-title{
+        margin: .5rem !important;
+    }
+
+}
