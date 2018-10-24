@@ -6,7 +6,8 @@ section {
         border-radius: 100%;
         background-color: $azul-escuro;
         color: white;
-        margin: .5625rem;
+        margin: .625rem;
+        opacity: none !important;
     }
     
     button:hover {
