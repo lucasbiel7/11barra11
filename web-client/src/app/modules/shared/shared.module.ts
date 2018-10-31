@@ -11,7 +11,7 @@ import { RouterModule } from '@angular/router';
 import { RodapeComponent } from './components/rodape/rodape.component';
 
 
-import { MatCheckboxModule } from '@angular/material';
+import { MatCheckboxModule, MatNativeDateModule } from '@angular/material';
 import { MatButtonModule } from '@angular/material';
 import { MatInputModule } from '@angular/material/input';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
@@ -126,6 +126,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
         MatTableModule,
         MatSortModule,
         MatPaginatorModule,
+        MatNativeDateModule,
         // Componentes shared
         CabecalhoComponent,
         MenuComponent,

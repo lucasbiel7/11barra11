@@ -1,15 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'onz-atividade',
-  templateUrl: './atividade.component.html',
-  styleUrls: ['./atividade.component.scss']
+    selector: 'onz-atividade',
+    templateUrl: './atividade.component.html',
+    styleUrls: ['./atividade.component.scss']
 })
 export class AtividadeComponent implements OnInit {
 
-  constructor() { }
+    public titulo: string;
 
-  ngOnInit() {
-  }
+    constructor() {
+        this.titulo = 'Cadastro de Atividade'
+    }
+
+    ngOnInit() {
+    }
 
 }
