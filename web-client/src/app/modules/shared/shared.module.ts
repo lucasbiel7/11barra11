@@ -1,15 +1,15 @@
-import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CabecalhoComponent } from './components/cabecalho/cabecalho.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { PainelAcoesComponent } from './components/painel-acoes/painel-acoes.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RodapeComponent } from './components/rodape/rodape.component';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgModule, ModuleWithProviders } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
-import { RodapeComponent } from './components/rodape/rodape.component';
-
+import { FormsModule } from '@angular/forms';
 
 import { MatCheckboxModule, MatNativeDateModule } from '@angular/material';
 import { MatButtonModule } from '@angular/material';
@@ -42,11 +42,10 @@ import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
 
-
-
 @NgModule({
     imports: [
         /* Angular Core */
+        FormsModule,
         RouterModule,
         BrowserModule,
         CommonModule,
@@ -84,10 +83,11 @@ import { MatPaginatorModule } from '@angular/material/paginator';
         MatSnackBarModule,
         MatTableModule,
         MatSortModule,
-        MatPaginatorModule
+        MatPaginatorModule,
     ],
     exports: [
         /* Angular Core */
+        FormsModule,
         BrowserModule,
         CommonModule,
         HttpModule,

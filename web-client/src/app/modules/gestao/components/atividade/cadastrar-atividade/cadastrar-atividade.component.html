@@ -65,66 +65,47 @@
                         </mat-form-field>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-6">
-                        <mat-form-field class="w-100">
-                            <input matInput placeholder="Nome Tag">
-                        </mat-form-field>
+
+                <div *ngIf="listaTags.length > 0">
+                    <div *ngFor="let item of listaTags">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                <span>{{item}}</span>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                <button (click)="adicionarTag()" mat-icon-button matTooltip="Adicionar"
+                                    matTooltipPosition="above">
+                                    <mat-icon>add_circle_outline</mat-icon>
+                                </button>
+                                <button mat-icon-button matTooltip="Remover" matTooltipPosition="above">
+                                    <mat-icon>remove_circle_outline</mat-icon>
+                                </button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-6">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-6">
+                    <mat-form-field class="w-100">
+                        <input matInput placeholder="Nome Tag" [(ngModel)]="nomeTag" />
+                    </mat-form-field>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-6">
+                    <mat-card-actions>
                         <mat-card-actions>
-                            <button color="primary" mat-raised-button>Cancelar</button>
-                            <button color="primary" mat-raised-button>Adicionar</button>
+                            <button (click)="adicionarTag()" mat-icon-button matTooltip="Adicionar" matTooltipPosition="above">
+                                <mat-icon>add_circle_outline</mat-icon>
+                            </button>
+                            <button mat-icon-button matTooltip="Remover" matTooltipPosition="above" [disabled]="listaTags.length < 2">
+                                <mat-icon>remove_circle_outline</mat-icon>
+                            </button>
                         </mat-card-actions>
-                    </div>
+                    </mat-card-actions>
                 </div>
+                <!-- </mat-form-field> -->
             </div>
-        </mat-card-content>
-    </mat-card>
-    <mat-card>
-        <mat-card-header>
-            <div class="row w-100">
-                <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
-                    <mat-card-title>Tag's</mat-card-title>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 text-right align-self-center">
-                    <button mat-icon-button (click)="excluirTag()">
-                        <mat-icon>delete</mat-icon>
-                    </button>
-                </div>
-            </div>
-        </mat-card-header>
-        <mat-card-content class="w-100">
-            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 w-100">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
-                        <ng-container matColumnDef="position">
-                            <th mat-header-cell *matHeaderCellDef style="width: 5rem">
-                                <mat-checkbox (change)="$event ? masterToggle() : null" [checked]="selection.hasValue() && isAllSelected()"
-                                    [indeterminate]="selection.hasValue() && !isAllSelected()">
-                                </mat-checkbox>
-                            </th>
-
-                            <td mat-cell *matCellDef="let row">
-                                <mat-checkbox (click)="$event.stopPropagation()" (change)="$event ? selection.toggle(row) : null"
-                                    [checked]="selection.isSelected(row)">
-                                </mat-checkbox>
-                            </td>
-                        </ng-container>
-                    </div>
-
-                    <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
-                        <ng-container matColumnDef="name">
-                            <th mat-header-cell *matHeaderCellDef> Nome </th>
-                            <td mat-cell *matCellDef="let element"> {{element.name}} </td>
-                        </ng-container>
-
-                        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-                        <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="selection.toggle(row)">
-                        </tr>
-                    </div>
-                </div>
-            </table>
         </mat-card-content>
         <mat-card-actions class="text-right p-2">
             <button color="primary" mat-raised-button>Cancelar</button>
