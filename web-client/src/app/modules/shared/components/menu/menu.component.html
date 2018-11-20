@@ -1,26 +1,11 @@
-<mat-card>
-    <div class="row">
-        <a [routerLink]="['cliente']">
-            <img matTooltip=" Clientes" matTooltipPosition="right" class="icon" src="assets/icons/clientes.png">
-        </a>
-        <a href="http://www.google.com">
-            <img matTooltip="Recursos" matTooltipPosition="right" class="icon" src="assets/icons/recursos.png">
-        </a>
+<section>
+    <div class="row no-gutters justify-content-center">
+        <div *ngFor="let item of itensMenu">
+            <div class="d-flex">
+                <button matTooltip="{{item.tooltip}}" matTooltipPosition="right" mat-icon-button>
+                    <mat-icon>{{item.icone}}</mat-icon>
+                </button>
+            </div>
+        </div>
     </div>
-    <div class="row">
-        <a href="http://www.google.com">
-            <img matTooltip="Perfis" matTooltipPosition="right" class="icon" src="assets/icons/perfis.png">
-        </a>
-        <a href="http://www.google.com">
-            <img matTooltip="Projetos" matTooltipPosition="right" class="icon" src="assets/icons/projetos.png">
-        </a>
-    </div>
-    <div class="row">
-        <a href="http://www.google.com">
-            <img matTooltip="Usuários" matTooltipPosition="right" class="icon" src="assets/icons/usuarios.png">
-        </a>
-        <a href="http://www.google.com">
-            <img matTooltip="Funcionalidades" matTooltipPosition="right" class="icon" src="assets/icons/funcionalidades.png">
-        </a>
-    </div>
-</mat-card>
+</section>

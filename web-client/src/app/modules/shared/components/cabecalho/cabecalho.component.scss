@@ -22,3 +22,9 @@ header {
         }
     }
 }
+
+::ng-deep .tamanho {
+    max-width: 12rem !important;
+    overflow: hidden !important;
+    background-color: rgba($color: $azul-escuro, $alpha: 0.1);
+}
