@@ -26,12 +26,13 @@ export class CadastrarAtividadeComponent implements OnInit {
         }
     }
 
-    desabilitaBotaoAdd() {
-        if (this.nomeTag === '') {
-            return true;
-        } else {
-            false;
-        }
+    desabilitarBotaoAdd() {
+        return this.nomeTag !== '' ? true : false;
     }
+
+    removerTag(event) {
+        console.log(event);
+    }
+
 
 }

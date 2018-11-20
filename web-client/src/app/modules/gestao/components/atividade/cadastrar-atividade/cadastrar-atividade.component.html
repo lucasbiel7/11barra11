@@ -77,34 +77,35 @@
                                     matTooltipPosition="above">
                                     <mat-icon>add_circle_outline</mat-icon>
                                 </button>
-                                <button mat-icon-button matTooltip="Remover" matTooltipPosition="above">
+                                <button (click)="removerTag($event)" mat-icon-button matTooltip="Remover"
+                                    matTooltipPosition="above">
                                     <mat-icon>remove_circle_outline</mat-icon>
                                 </button>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="row">
-                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-6">
-                    <mat-form-field class="w-100">
-                        <input matInput placeholder="Nome Tag" [(ngModel)]="nomeTag" />
-                    </mat-form-field>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-6">
-                    <mat-card-actions>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-6">
+                        <mat-form-field class="w-100">
+                            <input matInput placeholder="Nome Tag" [(ngModel)]="nomeTag" />
+                        </mat-form-field>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-6">
                         <mat-card-actions>
-                            <button (click)="adicionarTag()" mat-icon-button matTooltip="Adicionar" matTooltipPosition="above">
-                                <mat-icon>add_circle_outline</mat-icon>
-                            </button>
-                            <button mat-icon-button matTooltip="Remover" matTooltipPosition="above" [disabled]="listaTags.length < 2">
-                                <mat-icon>remove_circle_outline</mat-icon>
-                            </button>
+                            <mat-card-actions>
+                                <button (click)="adicionarTag()" [disabled]="!desabilitarBotaoAdd()" mat-icon-button
+                                    matTooltip="Adicionar" matTooltipPosition="above">
+                                    <mat-icon>add_circle_outline</mat-icon>
+                                </button>
+                                <button (click)="removerTag($event)" mat-icon-button matTooltip="Remover"
+                                    matTooltipPosition="above" [disabled]="listaTags.length < 2">
+                                    <mat-icon>remove_circle_outline</mat-icon>
+                                </button>
+                            </mat-card-actions>
                         </mat-card-actions>
-                    </mat-card-actions>
+                    </div>
                 </div>
-                <!-- </mat-form-field> -->
             </div>
         </mat-card-content>
         <mat-card-actions class="text-right p-2">
