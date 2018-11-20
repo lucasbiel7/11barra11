@@ -1,0 +1,9 @@
+<onz-painel-acoes [titulo]='titulo'>
+    <div botoao-acoes>
+        <button [routerLink]="['pesquisar']" (click)="titulo = 'Pesquisar Faturamento(s)'">Filtrar Pesquisa</button>
+        <button [routerLink]="['cadastrar']" (click)="titulo = 'Cadastro de Faturamento'"> Cadastrar</button>
+    </div>
+    <div conteudo>
+        <router-outlet></router-outlet>
+    </div>
+</onz-painel-acoes>

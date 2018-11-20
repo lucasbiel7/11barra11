@@ -4,7 +4,6 @@ import { CoreModule } from './modules/core/core.module';
 import { SharedModule } from './modules/shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
 import { GestaoModule } from './modules/gestao/gestao.module';
-import { PainelModule } from './modules/painel/painel.module';
 
 @NgModule({
     declarations: [
@@ -20,7 +19,6 @@ import { PainelModule } from './modules/painel/painel.module';
          * Modulos do sistema
          */
         GestaoModule,
-        PainelModule,
         /**
          * Roteamento principal
          * PS: Não colocar nenhum modulo abaixo dele motivo: Wildcard routing

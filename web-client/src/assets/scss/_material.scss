@@ -10,3 +10,17 @@
     }
 
 }
+mat-expansion-panel-header{
+    background-color:$azul-escuro;
+    &:hover, &:focus{
+        background-color:$azul-claro !important;
+    }
+
+    .mat-expansion-panel-header-title{
+        color:white;
+    }
+}
+
+mat-card{
+    padding: 0 !important;
+}

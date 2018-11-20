@@ -2,7 +2,7 @@
     <div class="row no-gutters justify-content-center">
         <div *ngFor="let item of itensMenu">
             <div class="d-flex">
-                <button matTooltip="{{item.tooltip}}" matTooltipPosition="right" mat-icon-button>
+                <button matTooltip="{{item.tooltip}}" matTooltipPosition="right" mat-icon-button [routerLink]="item.url">
                     <mat-icon>{{item.icone}}</mat-icon>
                 </button>
             </div>

@@ -1,0 +1,45 @@
+<mat-accordion>
+    <mat-expansion-panel #filtro hideToggle>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                <mat-icon>{{filtro.expanded?'arrow_drop_down':'arrow_right'}}</mat-icon>Filtros de pesquisa
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div class="container-fluid no-gutters">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                    <mat-form-field class="w-100">
+                        <mat-select placeholder="Cliente">
+                            <!-- opções de cliente -->
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                    <mat-form-field class="w-100">
+                        <mat-select placeholder="Projeto">
+                            <!-- Opções de projeto -->
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                    <mat-form-field class="w-100">
+                        <input matInput [matDatepicker]='dpAno' placeholder="Ano" #iAno>
+                        <mat-datepicker-toggle matSuffix [for]="dpAno"></mat-datepicker-toggle>
+                        <mat-datepicker #dpAno startView="multi-year" (yearSelected)="selecionaAno($event,dpAno,iAno)">
+                        </mat-datepicker>
+                    </mat-form-field>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                    <mat-form-field class="w-100">
+                        <input matInput [matDatepicker]='dpMes' placeholder="Mês" #iMes>
+                        <mat-datepicker-toggle matSuffix [for]="dpMes"></mat-datepicker-toggle>
+                        <mat-datepicker #dpMes startView="multi-year" (yearSelected)="selecionaAno($event,dpAno,iMes)">
+                        </mat-datepicker>
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+    </mat-expansion-panel>
+</mat-accordion>
