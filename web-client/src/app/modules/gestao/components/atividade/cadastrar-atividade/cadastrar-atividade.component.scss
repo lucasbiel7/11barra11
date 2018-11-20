@@ -1,0 +1,5 @@
+@import 'src/assets/scss/variables';
+
+::ng-deep mat-card {
+    padding: 0 !important;
+}

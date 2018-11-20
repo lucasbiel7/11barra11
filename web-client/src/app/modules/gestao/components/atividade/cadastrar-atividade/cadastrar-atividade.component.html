@@ -1,0 +1,116 @@
+<section class="w-100">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>Detalhamento</mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="ml-5 mr-5 mt-4">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                        <mat-form-field class="w-100">
+                            <mat-select placeholder="Projeto">
+                                <mat-option value="option">Projeto</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                        <mat-form-field class="w-100">
+                            <mat-select placeholder="Tipo de Atividade">
+                                <mat-option value="option">Atividade</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+                        <mat-form-field class="w-100">
+                            <input matInput placeholder="Nome">
+                        </mat-form-field>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                        <mat-form-field class="w-100">
+                            <mat-select placeholder="Fase">
+                                <mat-option value="option">Fase</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                        <mat-form-field class="w-100">
+                            <input matInput [matDatepicker]="dtInicio" placeholder="Data Prevista de Início">
+                            <mat-datepicker-toggle matSuffix [for]="dtInicio"></mat-datepicker-toggle>
+                            <mat-datepicker #dtInicio></mat-datepicker>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                        <mat-form-field class="w-100">
+                            <input matInput [matDatepicker]="dtFim" placeholder="Data Prevista de Término">
+                            <mat-datepicker-toggle matSuffix [for]="dtFim"></mat-datepicker-toggle>
+                            <mat-datepicker #dtFim></mat-datepicker>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                        <mat-form-field class="w-100">
+                            <input matInput placeholder="Entrega">
+                        </mat-form-field>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                        <mat-form-field class="w-100">
+                            <mat-select placeholder="Ordem de Serviço">
+                                <mat-option value="option">OS</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+
+                <div *ngIf="listaTags.length > 0">
+                    <div *ngFor="let item of listaTags">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                <span>{{item}}</span>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                <button (click)="adicionarTag()" mat-icon-button matTooltip="Adicionar"
+                                    matTooltipPosition="above">
+                                    <mat-icon>add_circle_outline</mat-icon>
+                                </button>
+                                <button (click)="removerTag($event)" mat-icon-button matTooltip="Remover"
+                                    matTooltipPosition="above">
+                                    <mat-icon>remove_circle_outline</mat-icon>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-6">
+                        <mat-form-field class="w-100">
+                            <input matInput placeholder="Nome Tag" [(ngModel)]="nomeTag" />
+                        </mat-form-field>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-6">
+                        <mat-card-actions>
+                            <mat-card-actions>
+                                <button (click)="adicionarTag()" [disabled]="!desabilitarBotaoAdd()" mat-icon-button
+                                    matTooltip="Adicionar" matTooltipPosition="above">
+                                    <mat-icon>add_circle_outline</mat-icon>
+                                </button>
+                                <button (click)="removerTag($event)" mat-icon-button matTooltip="Remover"
+                                    matTooltipPosition="above" [disabled]="listaTags.length < 2">
+                                    <mat-icon>remove_circle_outline</mat-icon>
+                                </button>
+                            </mat-card-actions>
+                        </mat-card-actions>
+                    </div>
+                </div>
+            </div>
+        </mat-card-content>
+        <mat-card-actions class="text-right p-2">
+            <button color="primary" mat-raised-button>Cancelar</button>
+            <button color="primary" mat-raised-button>Salvar</button>
+        </mat-card-actions>
+    </mat-card>
+</section>
